@@ -1,6 +1,6 @@
 const gameBoard = document.querySelector('.gameBoard');
 const info = document.querySelector('#info');
-
+const reset = document.getElementById('reset')
 const cells = [ "" , "" , "" , "" , "" , "" , "" , "" , "" ,];
 
 info.textContent = "Circle";
@@ -84,6 +84,10 @@ function showWinner() {
     })
     
 };
+
+reset.addEventListener('click' , () => {
+    window.location.reload();
+})
 
 
 
