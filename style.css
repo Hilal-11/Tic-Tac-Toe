@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(45deg , rgb(118, 36, 165) , rgb(51, 7, 102));
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    margin-top: 5%;
+    gap: 20px   ;
+}
+.info button {
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+.info #info{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.gameBoard {
+    width: 600px;
+    height: 600px;
+    /* background-color: white; */
+    /* border-radius: 10px; */
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    padding: 10px;
+    gap: 20px;
+}
+
+.board-box{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+    border-radius: 8px;
+    box-shadow: inset 20px 20px 30px rgba(193, 169, 221, 0.336) , inset -20px -20px 30px  rgba(27, 1, 43, 0.685) ;
+    color: white;
+
+}
+
+
+.circle {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 16px solid orange;
+
+}
+.cross {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+
+}.cross:before , .cross:after {
+    content: "";
+    position: absolute;
+    background-color: red;
+}
+.cross:before {
+    left: 50%;
+    width: 30%;
+    height: 100%;
+    margin-left: -15%;
+
+}
+.cross:after{
+    top: 50%;
+    height: 30%;
+    width: 100%;
+    margin-top: -15%;
+
+}
